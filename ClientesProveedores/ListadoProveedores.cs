@@ -21,5 +21,10 @@ namespace ClientesProveedores
         {
             
         }
+
+        private void ListadoProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ClientesProveedores
 {
-    public partial class RegistroProveedor : Form
+    public partial class PantallaInicioProveedor : Form
     {
-        public RegistroProveedor()
+        public PantallaInicioProveedor()
         {
             InitializeComponent();
         }
@@ -20,15 +20,24 @@ namespace ClientesProveedores
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            DatosProveedor datosProveedor = new DatosProveedor();
+            datosProveedor.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            IngresoProveedor ingresoProveedor = new IngresoProveedor();
-            ingresoProveedor.Show();
+            AnadirProducto anadirProducto = new AnadirProducto();
+            anadirProducto.ShowDialog();
         }
     }
 }

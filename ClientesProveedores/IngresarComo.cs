@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace ClientesProveedores
 {
-    public partial class RegistroProveedor : Form
+    public partial class IngresarComo : Form
     {
-        public RegistroProveedor()
+        public IngresarComo()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            ListadoProveedores proveedores = new ListadoProveedores();
+            proveedores.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnProveedor_Click(object sender, EventArgs e)
         {
             this.Hide();
             IngresoProveedor ingresoProveedor = new IngresoProveedor();

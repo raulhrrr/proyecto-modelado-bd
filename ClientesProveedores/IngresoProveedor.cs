@@ -63,5 +63,12 @@ namespace ClientesProveedores
         {
 
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
+            pantallaInicioProveedor.Show();
+        }
     }
 }
