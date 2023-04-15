@@ -17,14 +17,16 @@ namespace ClientesProveedores
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void ListadoProveedores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            IngresarComo ingresarComo = new IngresarComo();
+            ingresarComo.Show();
         }
     }
 }

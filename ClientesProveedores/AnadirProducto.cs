@@ -19,16 +19,12 @@ namespace ClientesProveedores
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            this.Close();
         }
 
         private void btgGuardar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            this.Close();
         }
     }
 }

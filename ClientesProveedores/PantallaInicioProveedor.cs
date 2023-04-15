@@ -39,5 +39,12 @@ namespace ClientesProveedores
             AnadirProducto anadirProducto = new AnadirProducto();
             anadirProducto.ShowDialog();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Hide();
+            IngresarComo ingresarComo = new IngresarComo();
+            ingresarComo.Show();
+        }
     }
 }
