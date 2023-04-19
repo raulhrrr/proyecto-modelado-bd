@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroProveedor));
             this.txtNitCed = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -159,30 +160,35 @@
             // 
             // btgGuardar
             // 
+            this.btgGuardar.BackColor = System.Drawing.Color.DarkCyan;
             this.btgGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btgGuardar.ForeColor = System.Drawing.SystemColors.Control;
             this.btgGuardar.Location = new System.Drawing.Point(279, 291);
             this.btgGuardar.Name = "btgGuardar";
             this.btgGuardar.Size = new System.Drawing.Size(119, 38);
             this.btgGuardar.TabIndex = 26;
             this.btgGuardar.Text = "Guardar";
-            this.btgGuardar.UseVisualStyleBackColor = true;
+            this.btgGuardar.UseVisualStyleBackColor = false;
             this.btgGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAtras
             // 
+            this.btnAtras.BackColor = System.Drawing.Color.DarkCyan;
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAtras.Location = new System.Drawing.Point(154, 291);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(119, 38);
             this.btnAtras.TabIndex = 27;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.button2_Click);
             // 
             // RegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(534, 361);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btgGuardar);
@@ -199,8 +205,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistroProveedor";
-            this.Text = "Form1";
+            this.Text = "Registro Proveedor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresarComo));
             this.label1 = new System.Windows.Forms.Label();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
@@ -45,35 +46,42 @@
             // 
             // btnCliente
             // 
-            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.Location = new System.Drawing.Point(209, 137);
+            this.btnCliente.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCliente.Location = new System.Drawing.Point(197, 135);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(119, 38);
+            this.btnCliente.Size = new System.Drawing.Size(144, 38);
             this.btnCliente.TabIndex = 6;
             this.btnCliente.Text = "Cliente";
-            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.UseVisualStyleBackColor = false;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnProveedor
             // 
-            this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.Location = new System.Drawing.Point(209, 220);
+            this.btnProveedor.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedor.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnProveedor.Location = new System.Drawing.Point(197, 218);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(119, 38);
+            this.btnProveedor.Size = new System.Drawing.Size(144, 38);
             this.btnProveedor.TabIndex = 7;
             this.btnProveedor.Text = "Proveedor";
-            this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.UseVisualStyleBackColor = false;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // IngresarComo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(534, 361);
             this.Controls.Add(this.btnProveedor);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IngresarComo";
             this.Text = "Ingresar Como";
             this.ResumeLayout(false);

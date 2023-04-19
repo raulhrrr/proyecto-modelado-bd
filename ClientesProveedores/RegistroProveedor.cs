@@ -20,8 +20,8 @@ namespace ClientesProveedores
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            IngresoProveedor ingresoProveedor = new IngresoProveedor();
+            ingresoProveedor.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

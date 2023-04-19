@@ -26,5 +26,10 @@ namespace ClientesProveedores
         {
             this.Close();
         }
+
+        private void AnadirProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
