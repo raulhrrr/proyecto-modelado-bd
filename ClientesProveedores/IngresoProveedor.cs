@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClientesProveedores
 {
     public partial class IngresoProveedor : Form
     {
+        private BusinessLogicLayer _businessLogicLayer;
+
         public IngresoProveedor()
         {
             InitializeComponent();
+            _businessLogicLayer = new BusinessLogicLayer();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -23,16 +19,6 @@ namespace ClientesProveedores
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -59,16 +45,14 @@ namespace ClientesProveedores
             registroProveedor.Show();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            if (_businessLogicLayer.ValidarDatosIngreso(txtUsuario.Text, txtContrasena.Text))
+            {
+                this.Hide();
+                PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
+                pantallaInicioProveedor.Show();
+            };
         }
     }
 }

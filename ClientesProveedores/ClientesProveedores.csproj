@@ -52,6 +52,8 @@
     <Compile Include="AnadirProducto.Designer.cs">
       <DependentUpon>AnadirProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusinessLogicLayer.cs" />
+    <Compile Include="DataAccessLayer.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="PantallaInicioProveedor.cs">
       <SubType>Form</SubType>
