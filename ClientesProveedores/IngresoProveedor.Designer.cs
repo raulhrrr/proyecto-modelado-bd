@@ -47,7 +47,6 @@
             this.label1.Size = new System.Drawing.Size(187, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario (NitCed)";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtUsuario
             // 
@@ -62,7 +61,6 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(225, 20);
             this.txtContrasena.TabIndex = 3;
-            this.txtContrasena.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // label2
             // 
@@ -73,7 +71,6 @@
             this.label2.Size = new System.Drawing.Size(133, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -84,7 +81,6 @@
             this.label3.Size = new System.Drawing.Size(237, 33);
             this.label3.TabIndex = 4;
             this.label3.Text = "Inicio de Sesión";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnIngresar
             // 

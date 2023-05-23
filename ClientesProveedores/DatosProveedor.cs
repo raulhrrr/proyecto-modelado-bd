@@ -5,93 +5,50 @@ namespace ClientesProveedores
 {
     public partial class DatosProveedor : Form
     {
-        public DatosProveedor()
+        private readonly int IdProveedor;
+        private readonly BusinessLogicLayer _businessLogicLayer;
+
+        public DatosProveedor(int idProveedor)
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            IdProveedor = idProveedor;
+            _businessLogicLayer = new BusinessLogicLayer();
         }
 
         private void DatosProveedor_Load(object sender, EventArgs e)
         {
+            Proveedor proveedor = _businessLogicLayer.ObtenerDatosProveedor(IdProveedor);
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
+            txtNombre.Text = proveedor.Nombre;
+            txtApellido.Text = proveedor.Apellido;
+            txtDireccion.Text = proveedor.Direccion;
+            txtTelefono.Text = proveedor.Telefono;
+            txtEmail.Text = proveedor.Email;
+            txtNitCed.Text = proveedor.NitCed;
+            txtContrasena.Text = proveedor.Contrasena;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
-            pantallaInicioProveedor.Show();
+            Proveedor proveedor = new Proveedor();
+            proveedor.Id = IdProveedor;
+            proveedor.Nombre = txtNombre.Text;
+            proveedor.Apellido = txtApellido.Text;
+            proveedor.Direccion = txtDireccion.Text;
+            proveedor.Telefono = txtTelefono.Text;
+            proveedor.Email = txtEmail.Text;
+            proveedor.NitCed = txtNitCed.Text;
+            proveedor.Contrasena = txtContrasena.Text;
+
+            _businessLogicLayer.RegistrarProveedor(proveedor);
+
+            this.Close();
         }
+
     }
 }

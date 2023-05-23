@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ClientesProveedores
@@ -26,7 +27,14 @@ namespace ClientesProveedores
 
         public void RegistrarProveedor(Proveedor proveedor)
         {
-            _dataAccessLayer.RegistrarProveedor(proveedor);
+            if (proveedor.Id == 0)
+            {
+                _dataAccessLayer.RegistrarProveedor(proveedor);
+            }
+            else
+            {
+                _dataAccessLayer.ActualizarProveedor(proveedor);
+            }
         }
 
         public bool ValidarDatosIngreso(string usuario, string contrasena)
@@ -39,11 +47,31 @@ namespace ClientesProveedores
 
             if (!_dataAccessLayer.ValidarDatosIngreso(usuario, contrasena))
             {
-                MessageBox.Show("Usuario o contraseña incorrecto");
+                MessageBox.Show("Usuario o contraseña incorrecto", "¡Advertencia!");
                 return false;
             }
 
             return true;
+        }
+
+        public int ObtenerIdProveeedor(string usuario, string contrasena)
+        {
+            return _dataAccessLayer.ObtenerIdProveedor(usuario, contrasena);
+        }
+
+        public Proveedor ObtenerDatosProveedor(int idProveedor)
+        {
+            return _dataAccessLayer.ObtenerDatosProveedor(idProveedor);
+        }
+
+        public List<Producto> ObtenerProductosPorIdProveedor(int idProveedor)
+        {
+            return _dataAccessLayer.ObtenerProductosPorIdProveedor(idProveedor);
+        }
+
+        internal List<Proveedor> ObtenerProveedores()
+        {
+            return _dataAccessLayer.ObtenerProveedores();
         }
     }
 }

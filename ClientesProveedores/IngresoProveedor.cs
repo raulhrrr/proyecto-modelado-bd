@@ -18,26 +18,6 @@ namespace ClientesProveedores
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -50,7 +30,10 @@ namespace ClientesProveedores
             if (_businessLogicLayer.ValidarDatosIngreso(txtUsuario.Text, txtContrasena.Text))
             {
                 this.Hide();
-                PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor();
+
+                int idProveedor = _businessLogicLayer.ObtenerIdProveeedor(txtUsuario.Text, txtContrasena.Text);
+
+                PantallaInicioProveedor pantallaInicioProveedor = new PantallaInicioProveedor(idProveedor);
                 pantallaInicioProveedor.Show();
             };
         }
